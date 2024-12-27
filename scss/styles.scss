@@ -1,10 +1,17 @@
+@use 'fonts';
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
 .header-container {
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
 
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
 
@@ -12,39 +19,30 @@
         height: 100px;
         width: auto;
     }
-}
 
+    .header-message {
+        font-family: exo2;
 
-.body-container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
-}
+        .small {
+            padding-left: 40px;
+            font-size: 40px;
+            font-style: italic;
+        }
 
-.img-pair {
-    display: flex;
-    justify-content: space-between;
-    flex-flow: row wrap;
-    max-width: 90%;
-    gap: 10px;
+        .large {
+            font-size: 80px;
+            font-weight: bold;
+        }
 
-    img {
-        max-width: 49%;
-        height: auto;
-        object-fit: cover;
-        flex: 1 1 49%;
+        text-transform: uppercase;
     }
 }
 
-.instagram-profile {
-    width: 90%;
-}
+.body-container {}
 
-@media (max-width: 575px) {
-    .img-pair img {
-        max-width: 100%;
-        /* Images stack on top of each other */
+@media (max-width: 1150px) {
+    .header-container {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
