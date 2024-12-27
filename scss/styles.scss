@@ -1,0 +1,50 @@
+.header-container {
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo img {
+        height: 100px;
+        width: auto;
+    }
+}
+
+
+.body-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+}
+
+.img-pair {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    max-width: 90%;
+    gap: 10px;
+
+    img {
+        max-width: 49%;
+        height: auto;
+        object-fit: cover;
+        flex: 1 1 49%;
+    }
+}
+
+.instagram-profile {
+    width: 90%;
+}
+
+@media (max-width: 575px) {
+    .img-pair img {
+        max-width: 100%;
+        /* Images stack on top of each other */
+    }
+}
